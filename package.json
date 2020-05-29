@@ -1,22 +1,16 @@
 {
-  "name": "package",
+  "name": "postman",
   "version": "1.0.0",
-  "description": "OTP API Testing",
-  "main": "index.js",
+  "description": "My Test Project",
   "scripts": {
-    "test": "test"
+    "test": "newman run postman_collection.json --reporters cli,junit --reporter-junit-export newman.xml --insecure"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/meetpatel8797/postman-newman-jenkins.git"
   },
-  "keywords": [
-    "postman"
-  ],
-  "author": "meet patel",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/meetpatel8797/postman-newman-jenkins/issues"
-  },
-  "homepage": "https://github.com/meetpatel8797/postman-newman-jenkins#readme"
+  "author": "Meet Patel",
+  "dependencies": {
+    "newman": "^4.3.1"
+  }
 }
