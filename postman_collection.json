@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "8f839071-3bf9-4e67-b944-39a3e5d6d414",
+		"name": "TS Mobile Apps API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get OTP of student signup level",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b4d1cca8-9bdf-46e0-ad27-d1bdc880e214",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"mobile\": \"120120120\",\r\n     \"mode_of_registration\": \"web\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://cms-dev.toppscholars.com/rbac/user/otp-details"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
